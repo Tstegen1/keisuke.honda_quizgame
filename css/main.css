@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  background:#170a0aeb;
+  position: relative;
+}
+
+#container {
+  width: 500px;
+  margin: 48px auto 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+}
+
+/* クイズ画面を隠す */
+#container.hidden {
+  display: none;
+}
+
+/* スタートボタンを隠す */
+#top.none {
+  display: none;
+}
+
+#top {
+  color: #fff;
+}
+
+/* スタートボタン */
+#top {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  top: 300px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 24px;
+  background: #ca6363;
+  padding: 10px;
+  border-bottom: solid 3px #ab6464;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#top:hover {
+  transform: translateY(3px);
+  border-bottom: none;
+}
+
+
+/* クイズの質問部分 */
+#question_order {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* クイズのジャンケン画像 */
+#question_img img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 答えの選択肢 */
+#choices {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 0 36px;
+  padding: 0;
+  font-size: 20px;
+}
+
+#choices > li {
+  list-style: none;
+  border: 2px solid #211717;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* 擬似要素で○❌判定 */
+#choices > li.maru::after {
+  content: '◯';
+}
+
+#choices > li.batu::after {
+  content: '❌';
+}
+
+#choices > li.batu {
+  background: rgb(158, 10, 10);
+  border-color: rgb(122, 3, 3);
+  color: #fff;
+  font-weight: bold;
+}
+
+#choices > li.maru {
+  background: rgb(10, 216, 223);
+  border-color: rgb(21, 211, 224);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 次へいくボタン */
+#btn {
+  background: #ca6363;
+  border-radius: 6px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #924949;
+  user-select: none;
+}
+
+#stop {
+  background: #ca6363;
+  border-radius: 6px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #924949;
+  user-select: none;
+}
+
+/* 次へいくボタンを無効にした時 */
+#btn.disabled {
+  background: #d8d2d2;
+  box-shadow: 0 4px 0 #bfbaba;
+}
+
+/* 結果を表示するウインドウ */
+#showscore {
+  position: absolute;
+  width: 300px;
+  padding: 30px;
+  background: #130909;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgb(5, 5, 5);
+}
+
+/* 結果 */
+#scoreresult {
+  margin: 0 0 30px;
+  font-size: 20px;
+}
+
+/* もう一度挑戦するボタン */
+#showscore a {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #fff;
+  background:  #ca6363;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* トップページに戻るボタン */
+#showscore a.back {
+  display: block;
+  width: 200px;
+  margin: 20px auto 0;
+  text-decoration: none;
+  color: #fff;
+  background:  #63c9ca;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+#showscore a:hover {
+  opacity: .8;
+}
+
+/* 結果表示するボタン隠す */
+#showscore.hidden {
+  transform: translateY(-500px);
+}
+
+/* クイズが終わった時の時間表示 */
+#finishtime {
+  margin: 0 0 30px;
+  font-size: 16px;
+}
+
+#time {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+/* 本田圭佑リベンジウインドウ */
+#back.hidden {
+  transform: translateY(-500px);
+}
+
+#back {
+  position: absolute;
+  width: 300px;
+  padding: 30px;
+  background: #130909;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgb(5, 5, 5);
+} 
+
+
+#back a.back {
+  display: block;
+  width: 200px;
+  margin: 20px auto 0;
+  text-decoration: none;
+  color: #fff;
+  background:  #63c9ca;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+

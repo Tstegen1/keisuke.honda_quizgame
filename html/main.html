@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>じゃんけんクイズ</title>
+</head>
+
+<body>
+
+  <!-- ゲームのスタートボタン -->
+  <p id="top">ゲームを始める！</p>
+
+  <!-- クイズ画面の構成 -->
+  <section id="container" class="hidden">
+    <p id="time"></p>
+    <!--クイズのじゃんけん画像-->
+    <div id="question_img"></div>
+
+    <!--クイズの質問内容-->
+    <p id="question_order"></p>
+
+    <!--答えの選択肢-->
+    <ul id="choices"></ul>
+
+    <!--次の問題にいくボタン-->
+    <div id="btn" class="disabled">次の問題へ</div>
+
+    <!--クイズ結果を表示するウインドウ-->
+    <div id="showscore" class="hidden">
+      <p id="scoreresult"></p>
+      <p id="finishtime"></p>
+      <a href=''>もう1度挑戦する</a>
+      <a class="back" href='start.html'>トップページに戻る</a>
+    </div>
+
+    <!-- リベンジウインドウ -->
+    <div id="back" class="hidden">
+      <a class="back" href='goal.html'>本田圭佑にリベンジ！！</a>
+    </div>
+
+  </section>
+  <!--------------------->
+
+
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
