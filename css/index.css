@@ -9,7 +9,7 @@ a {
   text-decoration: none;
   display: block;
   width: 300px;
-  margin: 0 auto;
+  margin: 5px auto 0;
   padding: 20px;
   background: #ca6363;
   border-radius: 6px;

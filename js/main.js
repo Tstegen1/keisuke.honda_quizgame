@@ -154,7 +154,7 @@
       scoreresult.textContent = `結果: ${quizSet.length}問中 ${score}問 正解！！！`; //結果表示
       
       //もし全問正解かつ15秒いないに回答できたら本田圭佑にリベンジできる
-      if ((finishtime <= 1400) && (score == 6)) {
+      if ((showtime.textContent.substring(9, 11) <= 15) && (score == 6)) {
         back.classList.remove('hidden');
         showscore.classList.add('hidden');
       }
