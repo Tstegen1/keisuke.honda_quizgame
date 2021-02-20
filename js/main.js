@@ -147,14 +147,19 @@
     if (currentNum === quizSet.length - 1) { //ボタン押した時に最後の問題なら
 
       clearTimeout(finishtime);//カウントストップ
-      console.log(finishtime);
 
       showscore.classList.remove('hidden'); //クラス外す
       showtime.textContent = `あなたのタイムは ${limit.textContent} 秒です！！`; //時間表示
       scoreresult.textContent = `結果: ${quizSet.length}問中 ${score}問 正解！！！`; //結果表示
-      
+      const resultNumberText = showtime.textContent.substring(8, 11)
+      const resultNumber = Number(resultNumberText);
+      console.log(resultNumber);
+
+      const goalNumber = Number("15");
+      console.log(goalNumber);
+
       //もし全問正解かつ15秒いないに回答できたら本田圭佑にリベンジできる
-      if ((showtime.textContent.substring(9, 11) <= 15) && (score == 6)) {
+      if ((resultNumber < goalNumber) && (score == 6)) {
         back.classList.remove('hidden');
         showscore.classList.add('hidden');
       }
